@@ -42,13 +42,13 @@ Admin privileges are only granted if the correct admin authorization code is ent
 ### How it Works
 
 - The backend reads a secret value from the environment variable `ADMIN_SECRET`
-- During registration, if the entered `adminCode` matches the value `secretadmin`, the user is registered with the role `admin`
+- During registration, if the entered `adminCode` matches the value `adminadminadmin`, the user is registered with the role `admin`
 - If the code is not provided or incorrect, the user defaults to the role `user`
 - The frontend does not expose the `ADMIN_SECRET` value
 
 ### Default Admin Name
 
-To register as the admin, you may use any name (e.g., "admin"), but what grants admin access is the correct `adminCode`, which must be `secretadmin`.
+To register as the admin, you must enter username as "admin" , and the adminCode must be `adminadminadmin`.
 
 ## Setup Instructions
 
@@ -78,7 +78,7 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 JWT_EXPIRE=30d
-ADMIN_SECRET=secretadmin
+ADMIN_SECRET=adminadminadmin
 
 Make sure to replace your_mongodb_connection_string and your_jwt_secret with actual secure values.
 
